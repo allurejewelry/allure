@@ -3,91 +3,63 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Squish & Co. — Trending Squishies & Cute Collectibles</title>
-<meta name="description" content="Your happy place for squishies! Shop trending toys, sensory squishies, NeeDoh, mystery boxes & cute collectibles.">
+<title>Allure. Gold Jewelry</title>
+<meta name="description" content="Allure. Luxury gold jewelry. Necklaces, bracelets, and earrings with timeless elegance.">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
-  --pastel-pink: #FFB6C1;
-  --pastel-purple: #E8D5F5;
-  --pastel-blue: #B8E4F0;
-  --pastel-yellow: #FFF3B0;
-  --pastel-mint: #B8F0D4;
-  --pastel-peach: #FFDAB9;
-  --bg-main: #FFF9FB;
-  --bg-card: #FFFFFF;
-  --text-dark: #4A3347;
-  --text-medium: #7B6178;
-  --text-light: #A89BA6;
-  --border: #F0E4ED;
-  --shadow: 0 4px 20px rgba(180, 130, 170, 0.1);
-  --shadow-hover: 0 8px 32px rgba(180, 130, 170, 0.2);
-  --radius: 16px;
+  --gold: #C9A84C;
+  --gold-light: #E8D48B;
+  --gold-dark: #9E7B2F;
+  --ivory: #FDFBF7;
+  --cream: #F8F4EC;
+  --text-dark: #1A1A1A;
+  --text-medium: #4A4A4A;
+  --text-light: #8A8070;
+  --border: #E8E0D4;
+  --shadow: 0 4px 24px rgba(150, 130, 80, 0.08);
+  --shadow-hover: 0 12px 40px rgba(150, 130, 80, 0.15);
+  --radius: 4px;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background: var(--bg-main);
+  font-family: 'Montserrat', sans-serif;
+  background: var(--ivory);
   color: var(--text-dark);
   min-height: 100vh;
 }
 
-/* HEADER */
 .header {
-  background: linear-gradient(135deg, var(--pastel-pink), var(--pastel-purple), var(--pastel-blue));
-  padding: 40px 20px;
+  padding: 50px 20px;
   text-align: center;
-  position: relative;
-  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+  background: var(--ivory);
 }
 
-.header::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
-  animation: shimmer 8s ease-in-out infinite;
+.logo-img {
+  max-width: 280px;
+  height: auto;
+  margin-bottom: 8px;
 }
-
-@keyframes shimmer {
-  0%, 100% { transform: translate(0, 0); }
-  50% { transform: translate(10%, 10%); }
-}
-
-.logo {
-  font-family: 'Quicksand', sans-serif;
-  font-size: 3em;
-  font-weight: 700;
-  color: white;
-  text-shadow: 2px 2px 8px rgba(150, 80, 130, 0.3);
-  position: relative;
-  z-index: 1;
-}
-
-.logo span { font-size: 0.5em; display: block; font-weight: 400; letter-spacing: 3px; }
 
 .tagline {
-  color: rgba(255,255,255,0.9);
+  font-family: 'Cormorant Garamond', serif;
   font-size: 1.1em;
-  margin-top: 8px;
-  position: relative;
-  z-index: 1;
   font-weight: 300;
+  font-style: italic;
+  color: var(--text-light);
+  letter-spacing: 1px;
 }
 
-/* NAV */
 .nav {
-  background: white;
-  padding: 12px 20px;
+  background: var(--ivory);
+  padding: 16px 20px;
   display: flex;
   justify-content: center;
-  gap: 24px;
+  gap: 32px;
   border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;
@@ -97,97 +69,131 @@ body {
 
 .nav a {
   text-decoration: none;
-  color: var(--text-medium);
-  font-weight: 500;
-  font-size: 0.9em;
-  padding: 6px 16px;
-  border-radius: 20px;
-  transition: all 0.2s;
+  color: var(--text-light);
+  font-weight: 400;
+  font-size: 0.8em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 6px 4px;
+  border-bottom: 1.5px solid transparent;
+  transition: all 0.3s;
+  cursor: pointer;
 }
 
 .nav a:hover, .nav a.active {
-  background: var(--pastel-purple);
-  color: var(--text-dark);
+  color: var(--gold-dark);
+  border-bottom: 1.5px solid var(--gold);
 }
 
-/* ANNOUNCEMENT BAR */
-.announcement {
-  background: var(--pastel-yellow);
+/* ABOUT SECTION */
+.about {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 60px 30px;
   text-align: center;
-  padding: 10px;
-  font-size: 0.85em;
-  font-weight: 500;
-  color: var(--text-dark);
+  border-bottom: 1px solid var(--border);
 }
 
-.announcement i { margin-right: 6px; }
+.about h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2em;
+  font-weight: 400;
+  color: var(--text-dark);
+  margin-bottom: 20px;
+}
 
-/* PRODUCTS GRID */
-.section-title {
+.about .divider {
+  width: 40px;
+  height: 1px;
+  background: var(--gold);
+  margin: 0 auto 24px;
+}
+
+.about p {
+  color: var(--text-medium);
+  font-size: 0.88em;
+  font-weight: 300;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.about em {
+  color: var(--gold-dark);
+  font-style: italic;
+}
+
+/* PRODUCTS */
+.section-header {
   text-align: center;
-  font-family: 'Quicksand', sans-serif;
+  padding: 50px 20px 30px;
+}
+
+.section-header h2 {
+  font-family: 'Cormorant Garamond', serif;
   font-size: 1.8em;
-  font-weight: 700;
-  margin: 40px 0 8px;
+  font-weight: 400;
   color: var(--text-dark);
+  letter-spacing: 1px;
 }
 
-.section-subtitle {
-  text-align: center;
-  color: var(--text-light);
-  font-size: 0.95em;
-  margin-bottom: 30px;
+.section-header .divider {
+  width: 40px;
+  height: 1px;
+  background: var(--gold);
+  margin: 12px auto 0;
 }
 
 .products {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 24px;
-  padding: 0 24px 40px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 0 40px 60px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .product-card {
-  background: var(--bg-card);
+  background: white;
   border-radius: var(--radius);
   overflow: hidden;
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
   cursor: pointer;
 }
 
 .product-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
   box-shadow: var(--shadow-hover);
 }
 
-.product-card { transition: all 0.3s ease, opacity 0.3s ease; }
 .product-img {
   width: 100%;
-  height: 240px;
+  height: 320px;
   object-fit: cover;
-  background: var(--pastel-purple);
+  background: var(--cream);
 }
 
 .product-info {
-  padding: 16px 20px 20px;
+  padding: 20px 24px 24px;
+  text-align: center;
 }
 
 .product-name {
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 700;
-  font-size: 1.05em;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: 1.15em;
   color: var(--text-dark);
-  margin-bottom: 4px;
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
 }
 
 .product-desc {
   color: var(--text-light);
-  font-size: 0.82em;
-  margin-bottom: 12px;
-  line-height: 1.4;
+  font-size: 0.78em;
+  margin-bottom: 16px;
+  line-height: 1.5;
+  font-weight: 300;
 }
 
 .product-footer {
@@ -197,252 +203,835 @@ body {
 }
 
 .product-price {
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 700;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
   font-size: 1.3em;
-  color: var(--text-dark);
+  color: var(--gold-dark);
 }
 
 .btn-buy {
-  background: linear-gradient(135deg, var(--pastel-pink), var(--pastel-purple));
+  background: var(--gold);
   color: white;
   border: none;
-  padding: 8px 20px;
-  border-radius: 20px;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  font-size: 0.85em;
+  padding: 10px 24px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 0.72em;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
   cursor: pointer;
-  transition: all 0.2s;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  transition: all 0.3s;
   text-decoration: none;
   display: inline-block;
 }
 
 .btn-buy:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(200, 130, 180, 0.4);
+  background: var(--gold-dark);
+  box-shadow: 0 4px 12px rgba(201, 168, 76, 0.3);
 }
 
-/* BADGES */
-.badge {
-  display: inline-block;
-  padding: 3px 10px;
-  border-radius: 12px;
+.category-label {
+  font-size: 0.65em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+/* MODAL */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.modal-overlay.active { display: flex; }
+
+.modal {
+  background: white;
+  max-width: 700px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 8px;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: var(--text-light);
+  background: none;
+  border: none;
+  z-index: 10;
+  transition: color 0.2s;
+}
+
+.modal-close:hover { color: var(--text-dark); }
+
+.modal-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.modal-content {
+  padding: 30px 36px 36px;
+}
+
+.modal-category {
   font-size: 0.7em;
-  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 500;
   margin-bottom: 8px;
 }
 
-.badge-hot { background: #FFE0E0; color: #D32F2F; }
-.badge-new { background: #E0F7FA; color: #00838F; }
-.badge-mystery { background: #F3E5F5; color: #7B1FA2; }
-.badge-limited { background: #FFF3E0; color: #E65100; }
+.modal-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8em;
+  font-weight: 500;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+
+.modal-description {
+  color: var(--text-medium);
+  font-size: 0.88em;
+  font-weight: 300;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.modal-details {
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+  margin-bottom: 24px;
+}
+
+.modal-details p {
+  font-size: 0.8em;
+  color: var(--text-light);
+  margin-bottom: 6px;
+  font-weight: 300;
+}
+
+.modal-details span {
+  color: var(--text-medium);
+  font-weight: 400;
+}
+
+.modal-price {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8em;
+  font-weight: 600;
+  color: var(--gold-dark);
+  margin-bottom: 16px;
+}
+
+.modal .btn-buy {
+  padding: 14px 36px;
+  font-size: 0.8em;
+}
 
 /* FEATURES */
 .features {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
-  padding: 40px 24px;
+  padding: 50px 40px;
   max-width: 1000px;
   margin: 0 auto;
   text-align: center;
-}
-
-.feature {
-  padding: 20px;
+  border-top: 1px solid var(--border);
 }
 
 .feature i {
-  font-size: 1.8em;
-  color: var(--pastel-pink);
-  margin-bottom: 10px;
+  font-size: 1.4em;
+  color: var(--gold);
+  margin-bottom: 12px;
 }
 
 .feature h3 {
-  font-family: 'Quicksand', sans-serif;
-  font-size: 0.95em;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1em;
+  font-weight: 500;
   margin-bottom: 4px;
 }
 
 .feature p {
-  font-size: 0.8em;
+  font-size: 0.75em;
   color: var(--text-light);
+  font-weight: 300;
 }
 
-/* FOOTER */
 .footer {
-  background: linear-gradient(135deg, var(--pastel-purple), var(--pastel-pink));
-  padding: 30px 20px;
+  background: var(--text-dark);
+  padding: 40px 20px;
   text-align: center;
-  color: white;
+  color: rgba(255,255,255,0.7);
 }
 
 .footer a {
-  color: white;
+  color: var(--gold-light);
   text-decoration: none;
-  margin: 0 12px;
-  font-size: 1.2em;
+  margin: 0 14px;
+  font-size: 1.1em;
+  transition: color 0.3s;
 }
+
+.footer a:hover { color: var(--gold); }
 
 .footer p {
-  margin-top: 12px;
-  font-size: 0.8em;
-  opacity: 0.8;
+  margin-top: 16px;
+  font-size: 0.75em;
+  font-weight: 300;
+  letter-spacing: 1px;
 }
 
-/* RESPONSIVE */
+.footer .sister-link {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 0.65em;
+  color: rgba(255,255,255,0.3);
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+
+.footer .sister-link:hover { color: rgba(255,255,255,0.6); }
+
 @media (max-width: 600px) {
-  .logo { font-size: 2.2em; }
-  .products { grid-template-columns: 1fr 1fr; gap: 12px; padding: 0 12px 30px; }
-  .product-img { height: 160px; }
-  .product-info { padding: 12px; }
-  .product-name { font-size: 0.9em; }
-  .product-desc { display: none; }
-  .btn-buy { padding: 6px 14px; font-size: 0.75em; }
+  .products { grid-template-columns: 1fr; gap: 20px; padding: 0 16px 40px; }
+  .product-img { height: 280px; }
+  .nav { gap: 16px; }
+  .nav a { font-size: 0.7em; }
+  .logo-img { max-width: 200px; }
+  .about { padding: 40px 20px; }
+  .modal-img { height: 260px; }
+  .modal-content { padding: 20px 24px 28px; }
+}
+.shipping-note {
+  font-size: 0.65em;
+  color: var(--text-light);
+  font-weight: 300;
+  display: block;
+  margin-top: 2px;
 }
 </style>
 </head>
 <body>
 
-<!-- ANNOUNCEMENT BAR -->
-<div class="announcement">
-  <i class="fa-solid fa-fire"></i> FREE SHIPPING on orders over $35! ✨ New drops every week
-</div>
-
 <!-- HEADER -->
 <div class="header">
-  <div class="logo">
-    Squish &amp; Co.
-    <span>✨ your happy place for squishies ✨</span>
-  </div>
-  <p class="tagline">Trending toys, sensory squishies &amp; cute collectibles</p>
+  <img class="logo-img" src="images/logo.png" alt="Allure">
+  <p class="tagline">Preorder now — use code EARLYBIRD10 for 10% off • Free shipping</p>
+</div>
+
+
+<!-- PROMO BANNER -->
+<div style="background:#C9A84C;text-align:center;padding:10px 20px;font-size:0.8em;font-weight:500;color:white;letter-spacing:0.5px;">
+  Preorder window closes July 4 • Ships week of July 13 • Use code <strong>EARLYBIRD10</strong> for 10% off
 </div>
 
 <!-- NAV -->
 <nav class="nav">
-  <a href="#" class="active" data-filter="all">All Products</a>
-  <a href="#" data-filter="squishies">Squishies</a>
-  <a href="#" data-filter="needoh">NeeDoh</a>
-  <a href="#" data-filter="mystery">Mystery Boxes</a>
-  <a href="#" data-filter="new">New Arrivals</a>
+  <a class="active" data-filter="all">All Pieces</a>
+  <a data-filter="necklaces">Necklaces</a>
+  <a data-filter="bracelets">Bracelets</a>
+  <a data-filter="earrings">Earrings</a>
+  <a data-filter="rings">Rings</a>
 </nav>
 
-<!-- PRODUCTS -->
-<h2 class="section-title">🛍️ Shop Our Collection</h2>
-<p class="section-subtitle">Trending squishies &amp; fidget toys — grab them before they're gone!</p>
+<!-- ABOUT SECTION -->
+<div class="about">
+  <h2>Allure</h2>
+  <div class="divider"></div>
+  <p><em>Allure.</em> Inspired by the beauty of gold shaped by nature. Timeless designs, effortless elegance.</p>
+  
+  
+</div>
+
+<!-- NECKLACES -->
+<div class="section-header">
+  <h2>Necklaces</h2>
+  <div class="divider"></div>
+</div>
 
 <div class="products">
 
-  <!-- Product 1: NeeDoh Nice Cube -->
-  <div class="product-card" data-category="needoh">
-    <img class="product-img" src="images/needoh-nice-cube.jpg" alt="NeeDoh Nice Cube — Soda Series">
+  <div class="product-card" data-category="necklaces" onclick="openModal(this)"
+    data-name="Y-Chain Lariat Necklace"
+    data-img="images/y-chain-necklace.jpg"
+    data-price="$28"
+    data-cat="Necklace"
+    data-detail="Clean lines, effortless drape. The barrel pendant shifts with you, catching light as it goes. Layers well. Looks just as good on its own."
+    data-specs="Material: Gold-tone alloy | Length: 45cm / 17.7in | Closure: Adjustable slide | Ring Size: Universal fit">
+    <img class="product-img" src="images/y-chain-necklace.jpg" alt="Y-Chain Lariat Necklace">
     <div class="product-info">
-      <span class="badge badge-hot">🔥 HOT</span>
-      <div class="product-name">NeeDoh Nice Cube — Soda Series</div>
-      <div class="product-desc">Super solid squish! Frapple, Sprite &amp; Glow editions. The viral NeeDoh everyone's hunting for.</div>
+      <div class="category-label">Necklace</div>
+      <div class="product-name">Y-Chain Lariat Necklace</div>
+      <div class="product-desc">Elegant lariat with barrel pendant. 45cm / 17.7in.</div>
       <div class="product-footer">
-        <span class="product-price">$12.99</span>
-        <a class="btn-buy" href="#">Buy Now</a>
+        <span class="product-price">$28<span class="shipping-note">Ships week of July 13</span></span>
+        <a class="btn-buy" href="https://buy.stripe.com/6oU00j8VqcL89BGb4q1oI0h">Preorder</a>
       </div>
     </div>
   </div>
 
-  <!-- Product 2: Starbucks Squishy -->
-  <div class="product-card" data-category="needoh">
-    <img class="product-img" src="images/starbucks-squishy.jpg" alt="Starbucks Strawberry Açaí Lemonade Squishy">
+  <div class="product-card" data-category="necklaces" onclick="openModal(this)"
+    data-name="Barrel &amp; Ring Charm Necklace"
+    data-img="images/barrel-charm-necklace.jpg"
+    data-price="$28"
+    data-cat="Necklace"
+    data-detail="This is the one people notice. Barrel and ring charms on a polished chain; bold enough to stand alone, refined enough to layer up. Expect compliments."
+    data-specs="Material: Gold-tone alloy | Length: 45cm / 17.7in | Closure: Lobster clasp | Ring Size: Universal fit">
+    <img class="product-img" src="images/barrel-charm-necklace.jpg" alt="Barrel & Ring Charm Necklace">
     <div class="product-info">
-      <span class="badge badge-limited">⭐ LIMITED</span>
-      <div class="product-name">Starbucks Strawberry Açaí Squishy</div>
-      <div class="product-desc">Schylling x Starbucks collab — super collectible &amp; adorable. Squeeze your favorite drink!</div>
+      <div class="category-label">Necklace</div>
+      <div class="product-name">Barrel &amp; Ring Charm Necklace</div>
+      <div class="product-desc">Statement charm necklace. Bold yet refined. 45cm / 17.7in.</div>
       <div class="product-footer">
-        <span class="product-price">$14.99</span>
-        <a class="btn-buy" href="#">Buy Now</a>
+        <span class="product-price">$28<span class="shipping-note">Ships week of July 13</span></span>
+        <a class="btn-buy" href="https://buy.stripe.com/00w7sL2x212qg044G21oI0m">Preorder</a>
       </div>
     </div>
   </div>
 
-  <!-- Product 3: Rainbow Mystery Bun -->
-  <div class="product-card" data-category="mystery squishies">
-    <img class="product-img" src="images/mystery-bun.jpg" alt="Rainbow Mystery Dumpling Bun">
+  <div class="product-card" data-category="necklaces" onclick="openModal(this)"
+    data-name="Clover Pendant Necklace"
+    data-img="images/clover-necklace.jpg"
+    data-price="$28"
+    data-cat="Necklace"
+    data-detail="Polished gold clover that sits right at the collarbone. Simple, lucky, feminine. The kind of necklace you put on in the morning and forget to take off at night."
+    data-specs="Material: Gold-tone alloy | Length: 45cm / 17.7in | Closure: Spring ring | Ring Size: Universal fit">
+    <img class="product-img" src="images/clover-necklace.jpg" alt="Clover Pendant Necklace">
     <div class="product-info">
-      <span class="badge badge-mystery">🎲 MYSTERY</span>
-      <div class="product-name">Rainbow Mystery Dumpling Bun</div>
-      <div class="product-desc">What color will you get? Squishy fidget fun — Sugar Edition with glitter surprise!</div>
+      <div class="category-label">Necklace</div>
+      <div class="product-name">Clover Pendant Necklace</div>
+      <div class="product-desc">Dainty clover in polished gold. 45cm / 17.7in.</div>
       <div class="product-footer">
-        <span class="product-price">$9.99</span>
-        <a class="btn-buy" href="#">Buy Now</a>
+        <span class="product-price">$28<span class="shipping-note">Ships week of July 13</span></span>
+        <a class="btn-buy" href="https://buy.stripe.com/4gMaEX9Zu3ay9BG2xU1oI0n">Preorder</a>
       </div>
     </div>
   </div>
 
-  <!-- Product 4: Squeezy Dumplings -->
-  <div class="product-card" data-category="squishies new">
-    <img class="product-img" src="images/squeezy-dumplings.jpg" alt="Squeezy Dumplings Kawaii Set">
+  <div class="product-card" data-category="necklaces" onclick="openModal(this)"
+    data-name="LOVE Heart Pendant"
+    data-img="images/love-heart-necklace.jpg"
+    data-price="$28"
+    data-cat="Necklace"
+    data-detail="Romantic without being shy about it. LOVE in gold script, heart motif that catches every angle. Gift it or keep it for yourself. We won't judge."
+    data-specs="Material: Gold-tone alloy | Length: 45cm / 17.7in | Closure: Lobster clasp | Ring Size: Universal fit">
+    <img class="product-img" src="images/love-heart-necklace.jpg" alt="LOVE Heart Pendant">
     <div class="product-info">
-      <span class="badge badge-new">✨ NEW</span>
-      <div class="product-name">Squeezy Dumplings — Kawaii Set</div>
-      <div class="product-desc">Adorable kawaii-face dumplings in steamer baskets. Collect all 6 colors!</div>
+      <div class="category-label">Necklace</div>
+      <div class="product-name">LOVE Heart Pendant</div>
+      <div class="product-desc">Romantic gold script with heart motif. 45cm / 17.7in.</div>
       <div class="product-footer">
-        <span class="product-price">$8.99</span>
-        <a class="btn-buy" href="#">Buy Now</a>
+        <span class="product-price">$28<span class="shipping-note">Ships week of July 13</span></span>
+        <a class="btn-buy" href="https://buy.stripe.com/9B6bJ15JefXkaFK4G21oI0o">Preorder</a>
       </div>
     </div>
   </div>
 
-  <!-- Product 5: Butter Squishy -->
-  <div class="product-card" data-category="squishies">
-    <img class="product-img" src="images/butter-squishy.jpg" alt="Butter Squishy Slow Rise">
+  <div class="product-card" data-category="necklaces" onclick="openModal(this)"
+    data-name="Engraved Gold Bar Pendant"
+    data-img="images/gold-bar-pendant.jpg"
+    data-price="$28"
+    data-cat="Necklace"
+    data-detail="An engraved bar on a mixed chain. Sleek, a little edgy, impossibly cool. This is the piece that makes jeans and a white tee look intentional."
+    data-specs="Material: Gold-tone alloy | Length: 45cm / 17.7in | Chain: Mixed link | Ring Size: Universal fit">
+    <img class="product-img" src="images/gold-bar-pendant.jpg" alt="Engraved Gold Bar Pendant">
     <div class="product-info">
-      <span class="badge badge-hot">🔥 VIRAL</span>
-      <div class="product-name">Butter Squishy — Slow Rise</div>
-      <div class="product-desc">Super soft, slow-rising butter stick. Looks SO real! TikTok famous 🧈</div>
+      <div class="category-label">Necklace</div>
+      <div class="product-name">Engraved Gold Bar Pendant</div>
+      <div class="product-desc">Edgy mixed-chain with engraved bar. 45cm / 17.7in.</div>
       <div class="product-footer">
-        <span class="product-price">$6.99</span>
-        <a class="btn-buy" href="#">Buy Now</a>
+        <span class="product-price">$28<span class="shipping-note">Ships week of July 13</span></span>
+        <a class="btn-buy" href="https://buy.stripe.com/8x29AT7Rm3aycNS7Se1oI0p">Preorder</a>
       </div>
     </div>
   </div>
 
-  <!-- Product 6: Jelly Squish Jellyfish -->
-  <div class="product-card" data-category="squishies new">
-    <img class="product-img" src="images/jelly-jellyfish.jpg" alt="Jelly Squish Jellyfish">
+  <div class="product-card" data-category="necklaces" onclick="openModal(this)"
+    data-name="Flower Wreath Pendant"
+    data-img="images/flower-wreath-pendant.jpg"
+    data-price="$28"
+    data-cat="Necklace"
+    data-detail="Filigree this intricate deserves a closer look. A tiny floral wreath in gold, impossibly detailed, impossibly light. Nature, miniaturized and made precious."
+    data-specs="Material: Gold-tone alloy | Length: 45cm / 17.7in | Style: Filigree | Ring Size: Universal fit">
+    <img class="product-img" src="images/flower-wreath-pendant.jpg" alt="Flower Wreath Pendant">
     <div class="product-info">
-      <span class="badge badge-new">✨ NEW</span>
-      <div class="product-name">Jelly Squish Jellyfish</div>
-      <div class="product-desc">Translucent squishy jellyfish in blue, pink &amp; purple. Satisfying sensory stretch!</div>
+      <div class="category-label">Necklace</div>
+      <div class="product-name">Flower Wreath Pendant</div>
+      <div class="product-desc">Delicate gold filigree floral wreath. 45cm / 17.7in.</div>
       <div class="product-footer">
-        <span class="product-price">$7.99</span>
-        <a class="btn-buy" href="#">Buy Now</a>
+        <span class="product-price">$28<span class="shipping-note">Ships week of July 13</span></span>
+        <a class="btn-buy" href="https://buy.stripe.com/dRm9ATb3yaD03difkG1oI0g">Preorder</a>
       </div>
     </div>
   </div>
 
-  <!-- Product 7: Spiky Puffer Ball -->
-  <div class="product-card" data-category="squishies">
-    <img class="product-img" src="images/puffer-ball.jpg" alt="Spiky Sensory Puffer Ball">
+  <div class="product-card" data-category="necklaces" onclick="openModal(this)"
+    data-name="Gold Gourd (H\u00fal\u00fa) Pendant"
+    data-img="images/gourd-pendant.jpg"
+    data-price="$28"
+    data-cat="Necklace"
+    data-detail="The double-gourd has meant blessings and prosperity for centuries. Ornately carved, hung on a hand-braided cord. Meaningful and beautiful in equal measure."
+    data-specs="Material: Gold-tone alloy | Cord: 45cm / 17.7in braided | Symbol: Prosperity &amp; blessings | Ring Size: Universal fit">
+    <img class="product-img" src="images/gourd-pendant.jpg" alt="Gold Gourd Pendant">
     <div class="product-info">
-      <span class="badge badge-hot">🔥 POPULAR</span>
-      <div class="product-name">Spiky Sensory Puffer Ball</div>
-      <div class="product-desc">Soft spiky texture, perfect fidget &amp; stress relief. Squish it, stretch it!</div>
+      <div class="category-label">Necklace</div>
+      <div class="product-name">Gold Gourd (Húlú) Pendant</div>
+      <div class="product-desc">Carved double-gourd on braided cord. 45cm / 17.7in.</div>
       <div class="product-footer">
-        <span class="product-price">$5.99</span>
-        <a class="btn-buy" href="#">Buy Now</a>
+        <span class="product-price">$28<span class="shipping-note">Ships week of July 13</span></span>
+        <a class="btn-buy" href="https://buy.stripe.com/00waEX5JecL84hm6Oa1oI0f">Preorder</a>
       </div>
     </div>
   </div>
 
-  <!-- Product 8: Mystery Dim Sum Surprise -->
-  <div class="product-card" data-category="mystery squishies">
-    <img class="product-img" src="images/dim-sum-mystery.jpg" alt="Mystery Dim Sum Surprise">
+  <div class="product-card" data-category="necklaces" onclick="openModal(this)"
+    data-name="Mandala Medallion Pendant"
+    data-img="images/mandala-pendant.jpg"
+    data-price="$28"
+    data-cat="Necklace"
+    data-detail="Mandala disc, CZ halo, hand-braided cord. Grounding and striking at once. The kind of pendant that starts conversations about where you found it."
+    data-specs="Material: Gold-tone alloy + CZ | Cord: 45cm / 17.7in braided | Style: Spiritual | Ring Size: Universal fit">
+    <img class="product-img" src="images/mandala-pendant.jpg" alt="Mandala Medallion Pendant">
     <div class="product-info">
-      <span class="badge badge-mystery">🎲 MYSTERY</span>
-      <div class="product-name">Mystery Dim Sum Surprise</div>
-      <div class="product-desc">Collect them all! Regular &amp; glitter editions. The ultimate unboxing experience!</div>
+      <div class="category-label">Necklace</div>
+      <div class="product-name">Mandala Medallion Pendant</div>
+      <div class="product-desc">Intricate mandala with CZ halo on braided cord. 45cm / 17.7in.</div>
       <div class="product-footer">
-        <span class="product-price">$16.99</span>
-        <a class="btn-buy" href="#">Buy Now</a>
+        <span class="product-price">$28<span class="shipping-note">Ships week of July 13</span></span>
+        <a class="btn-buy" href="https://buy.stripe.com/aFafZhgnScL8eW0fkG1oI0d">Preorder</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card" data-category="necklaces" onclick="openModal(this)"
+    data-name="Filigree Prayer Wheel Pendant"
+    data-img="images/filigree-pendant.jpg"
+    data-price="$28"
+    data-cat="Necklace"
+    data-detail="The prayer wheel at the center actually spins. Filigree teardrop, exquisite craftsmanship, real movement. Meditative to wear, beautiful to look at."
+    data-specs="Material: Gold-tone alloy | Cord: 45cm / 17.7in braided | Feature: Spinning center | Ring Size: Universal fit">
+    <img class="product-img" src="images/filigree-pendant.jpg" alt="Filigree Prayer Wheel Pendant">
+    <div class="product-info">
+      <div class="category-label">Necklace</div>
+      <div class="product-name">Filigree Prayer Wheel Pendant</div>
+      <div class="product-desc">Ornate filigree with spinning wheel center. 45cm / 17.7in.</div>
+      <div class="product-footer">
+        <span class="product-price">$28<span class="shipping-note">Ships week of July 13</span></span>
+        <a class="btn-buy" href="https://buy.stripe.com/3cI9AT4FafXk29egoK1oI0e">Preorder</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card" data-category="necklaces" onclick="openModal(this)"
+    data-name="Zodiac Wheel Pendant"
+    data-img="images/zodiac-pendant.jpg"
+    data-price="$28"
+    data-cat="Necklace"
+    data-detail="Zodiac wheel engraved in gold, emerald center, CZ border. Celestial, personal, and heavy enough in the hand to feel real. Your story, in gold."
+    data-specs="Material: Gold-tone alloy + Emerald + CZ | Cord: 45cm / 17.7in braided | Theme: Zodiac | Ring Size: Universal fit">
+    <img class="product-img" src="images/zodiac-pendant.jpg" alt="Zodiac Wheel Pendant">
+    <div class="product-info">
+      <div class="category-label">Necklace</div>
+      <div class="product-name">Zodiac Wheel Pendant</div>
+      <div class="product-desc">Zodiac disc with emerald center &amp; CZ border. 45cm / 17.7in.</div>
+      <div class="product-footer">
+        <span class="product-price">$28<span class="shipping-note">Ships week of July 13</span></span>
+        <a class="btn-buy" href="https://buy.stripe.com/aFa3cv1sYdPc0163BY1oI0b">Preorder</a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card" data-category="necklaces" onclick="openModal(this)"
+    data-name="Pixiu Necklace &amp; Ring Set"
+    data-img="images/pixiu-necklace-ring-set.jpg"
+    data-price="$28"
+    data-cat="Necklace"
+    data-detail="Gold Y-chain with a carved pixiu pendant paired with a matching filigree ring. A set that attracts wealth and turns heads. Wear them together or separately."
+    data-specs="Material: Gold-tone alloy | Length: 45cm / 17.7in | Ring: Adjustable, universal fit | Includes: Necklace + Ring">
+    <img class="product-img" src="images/pixiu-necklace-ring-set.jpg" alt="Pixiu Necklace & Ring Set">
+    <div class="product-info">
+      <div class="category-label">Necklace + Ring Set</div>
+      <div class="product-name">Pixiu Necklace &amp; Ring Set</div>
+      <div class="product-desc">Gold Y-chain with pixiu pendant + matching filigree ring. 45cm / 17.7in.</div>
+      <div class="product-footer">
+        <span class="product-price">$28<span class="shipping-note">Ships week of July 13</span></span>
+        <a class="btn-buy" href="#">Preorder</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card" data-category="necklaces" onclick="openModal(this)"
+    data-name="Rocking Horse Pendant Necklace"
+    data-img="images/rocking-horse-pendant.jpg"
+    data-price="$28"
+    data-cat="Necklace"
+    data-detail="A tiny gold rocking horse on a delicate chain. Nostalgic, charming, and unexpectedly cool. The kind of pendant that makes people lean in for a closer look."
+    data-specs="Material: Gold-tone alloy | Length: 45cm / 17.7in | Ring Size: Adjustable, universal fit">
+    <img class="product-img" src="images/rocking-horse-pendant.jpg" alt="Rocking Horse Pendant">
+    <div class="product-info">
+      <div class="category-label">Necklace</div>
+      <div class="product-name">Rocking Horse Pendant Necklace</div>
+      <div class="product-desc">Adorable gold rocking horse charm. 45cm / 17.7in.</div>
+      <div class="product-footer">
+        <span class="product-price">$28<span class="shipping-note">Ships week of July 13</span></span>
+        <a class="btn-buy" href="https://buy.stripe.com/00w3cv4Fa6mK3dia0m1oI0j">Preorder</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- BRACELETS -->
+<div class="section-header">
+  <h2>Bracelets</h2>
+  <div class="divider"></div>
+</div>
+
+<div class="products">
+
+  <div class="product-card" data-category="bracelets" onclick="openModal(this)"
+    data-name="Turquoise &amp; Gold Bead Bracelet"
+    data-img="images/turquoise-bead-bracelet.jpg"
+    data-price="$22"
+    data-cat="Bracelet"
+    data-detail="Gold beads, turquoise, ruby. Bohemian at heart but luxurious on the wrist. Stretch fit means no fumbling with clasps. Stacks well, wears better solo."
+    data-specs="Material: Gold-tone alloy + Turquoise + Ruby | Fit: Stretch elastic | Style: Boho-luxe">
+    <img class="product-img" src="images/turquoise-bead-bracelet.jpg" alt="Turquoise & Gold Bead Bracelet">
+    <div class="product-info">
+      <div class="category-label">Bracelet</div>
+      <div class="product-name">Turquoise &amp; Gold Bead Bracelet</div>
+      <div class="product-desc">Gold beads with turquoise and ruby accents. Bohemian elegance.</div>
+      <div class="product-footer">
+        <span class="product-price">$22<span class="shipping-note">Ships week of July 13</span></span>
+        <a class="btn-buy" href="https://buy.stripe.com/dRm28r0oU3ay8xCc8u1oI0c">Preorder</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card" data-category="bracelets" onclick="openModal(this)"
+    data-name="Pearl &amp; Gold Spacer Bracelet"
+    data-img="images/pearl-gold-bracelet.jpg"
+    data-price="$22"
+    data-cat="Bracelet"
+    data-detail="Freshwater pearls, polished gold spacers. Your grandmother would approve. Your friends will ask where you got it. Timeless for a reason."
+    data-specs="Material: Gold-tone alloy + Freshwater Pearl | Fit: Stretch elastic | Style: Classic">
+    <img class="product-img" src="images/pearl-gold-bracelet.jpg" alt="Pearl & Gold Bracelet">
+    <div class="product-info">
+      <div class="category-label">Bracelet</div>
+      <div class="product-name">Pearl &amp; Gold Spacer Bracelet</div>
+      <div class="product-desc">Freshwater pearls with polished gold spacers. Timeless.</div>
+      <div class="product-footer">
+        <span class="product-price">$22<span class="shipping-note">Ships week of July 13</span></span>
+        <a class="btn-buy" href="https://buy.stripe.com/9B65kDgnSfXkdRWb4q1oI0q">Preorder</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card" data-category="bracelets" onclick="openModal(this)"
+    data-name="Chain Link Bracelet with CZ"
+    data-img="images/chain-link-bracelet.jpg"
+    data-price="$22"
+    data-cat="Bracelet"
+    data-detail="Chunky links, CZ sparkle, all gold. This bracelet enters a room before you do. Statement without trying too hard."
+    data-specs="Material: Gold-tone alloy + CZ | Closure: Toggle clasp | Style: Statement">
+    <img class="product-img" src="images/chain-link-bracelet.jpg" alt="Chain Link Bracelet">
+    <div class="product-info">
+      <div class="category-label">Bracelet</div>
+      <div class="product-name">Chain Link Bracelet with CZ</div>
+      <div class="product-desc">Chunky links with sparkling CZ accents. Statement luxury.</div>
+      <div class="product-footer">
+        <span class="product-price">$22<span class="shipping-note">Ships week of July 13</span></span>
+        <a class="btn-buy" href="https://buy.stripe.com/7sY3cv6Ni5iG8xCegC1oI0a">Preorder</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card" data-category="bracelets" onclick="openModal(this)"
+    data-name="Jade Butterfly Charm Bracelet"
+    data-img="images/butterfly-bracelet.jpg"
+    data-price="$22"
+    data-cat="Bracelet"
+    data-detail="Jade butterflies and gold leaves on a delicate chain. Light enough to forget you're wearing it. Pretty enough that you won't."
+    data-specs="Material: Gold-tone alloy + Jade | Closure: Adjustable chain | Style: Nature-inspired">
+    <img class="product-img" src="images/butterfly-bracelet.jpg" alt="Jade Butterfly Bracelet">
+    <div class="product-info">
+      <div class="category-label">Bracelet</div>
+      <div class="product-name">Jade Butterfly Charm Bracelet</div>
+      <div class="product-desc">Gold chain with jade butterfly and leaf charms.</div>
+      <div class="product-footer">
+        <span class="product-price">$22<span class="shipping-note">Ships week of July 13</span></span>
+        <a class="btn-buy" href="#">Preorder</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card" data-category="bracelets" onclick="openModal(this)"
+    data-name="Jade Pixiu Prosperity Bracelet"
+    data-img="images/pixiu-bracelet.jpg"
+    data-price="$24"
+    data-cat="Bracelet"
+    data-detail="The Pixiu guards wealth and wards off misfortune. Carved jade alongside gold coin charms. Wear the legend. Look good doing it."
+    data-specs="Material: Gold-tone alloy + Jade | Fit: Stretch elastic | Symbol: Wealth &amp; protection">
+    <img class="product-img" src="images/pixiu-bracelet.jpg" alt="Jade Pixiu Bracelet">
+    <div class="product-info">
+      <div class="category-label">Bracelet</div>
+      <div class="product-name">Jade Pixiu Prosperity Bracelet</div>
+      <div class="product-desc">Jade pixiu guardian with gold coin charms. Auspicious.</div>
+      <div class="product-footer">
+        <span class="product-price">$24<span class="shipping-note">Ships week of July 13</span></span>
+        <a class="btn-buy" href="https://buy.stripe.com/dRmcN58Vq26u6pu1tQ1oI0r">Preorder</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card" data-category="bracelets" onclick="openModal(this)"
+    data-name="Rainbow Star &amp; Bell Charm Bracelet"
+    data-img="images/rainbow-star-bracelet.jpg"
+    data-price="$24"
+    data-cat="Bracelet"
+    data-detail="Woven cord, gold stars, tiny bells that actually chime when you move. Playful, precious, impossible not to smile at."
+    data-specs="Material: Gold-tone alloy + Woven Cord | Closure: Adjustable knot | Style: Playful">
+    <img class="product-img" src="images/rainbow-star-bracelet.jpg" alt="Rainbow Star Bracelet">
+    <div class="product-info">
+      <div class="category-label">Bracelet</div>
+      <div class="product-name">Rainbow Star &amp; Bell Charm Bracelet</div>
+      <div class="product-desc">Woven cord with gold star and bell charms. Playful luxury.</div>
+      <div class="product-footer">
+        <span class="product-price">$24<span class="shipping-note">Ships week of July 13</span></span>
+        <a class="btn-buy" href="https://buy.stripe.com/7sYeVd6NibH4aFK4G21oI08">Preorder</a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card" data-category="bracelets" onclick="openModal(this)"
+    data-name="Infinity Heart &amp; Clover Bracelet"
+    data-img="images/infinity-heart-bracelet.jpg"
+    data-price="$22"
+    data-cat="Bracelet"
+    data-detail="Wheat chain with a CZ infinity heart and pave clover charm. Lucky and lovely. The clasp is secure, the sparkle is real, the compliments are constant."
+    data-specs="Material: Gold-tone alloy + CZ | Closure: Lobster clasp | Style: Charm bracelet">
+    <img class="product-img" src="images/infinity-heart-bracelet.jpg" alt="Infinity Heart & Clover Bracelet">
+    <div class="product-info">
+      <div class="category-label">Bracelet</div>
+      <div class="product-name">Infinity Heart &amp; Clover Bracelet</div>
+      <div class="product-desc">Wheat chain with CZ infinity heart + pave clover.</div>
+      <div class="product-footer">
+        <span class="product-price">$22<span class="shipping-note">Ships week of July 13</span></span>
+        <a class="btn-buy" href="https://buy.stripe.com/dRmaEX2x26mKaFK2xU1oI0k">Preorder</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card" data-category="bracelets" onclick="openModal(this)"
+    data-name="Mother of Pearl Butterfly Bracelet (White)"
+    data-img="images/butterfly-bracelet-white.jpg"
+    data-price="$31"
+    data-cat="Bracelet"
+    data-detail="Gold beaded-edge butterflies with white mother of pearl inlay. Delicate, luminous, and elegant. The shell catches light differently every time you move."
+    data-specs="Material: Gold-tone alloy + Mother of Pearl | Closure: Adjustable chain | Style: Nature-inspired">
+    <img class="product-img" src="images/butterfly-bracelet-white.jpg" alt="Mother of Pearl Butterfly Bracelet">
+    <div class="product-info">
+      <div class="category-label">Bracelet</div>
+      <div class="product-name">Mother of Pearl Butterfly Bracelet</div>
+      <div class="product-desc">Gold butterflies with white shell inlay. Luminous.</div>
+      <div class="product-footer">
+        <span class="product-price">$22<span class="shipping-note">Ships week of July 13</span></span>
+        <a class="btn-buy" href="https://buy.stripe.com/9B65kD2x226u15agoK1oI0t">Preorder</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card" data-category="bracelets" onclick="openModal(this)"
+    data-name="Coral Butterfly Bracelet (Pink)"
+    data-img="images/butterfly-bracelet-coral.jpg"
+    data-price="$22"
+    data-cat="Bracelet"
+    data-detail="Same beautiful butterfly design in coral pink enamel. Warm, feminine, and perfect for summer. Pairs well with the white version for a stacked look."
+    data-specs="Material: Gold-tone alloy + Coral Enamel | Closure: Adjustable chain | Style: Nature-inspired">
+    <img class="product-img" src="images/butterfly-bracelet-coral.jpg" alt="Coral Butterfly Bracelet">
+    <div class="product-info">
+      <div class="category-label">Bracelet</div>
+      <div class="product-name">Coral Butterfly Bracelet (Pink)</div>
+      <div class="product-desc">Gold butterflies with coral pink enamel. Warm and feminine.</div>
+      <div class="product-footer">
+        <span class="product-price">$22<span class="shipping-note">Ships week of July 13</span></span>
+        <a class="btn-buy" href="https://buy.stripe.com/6oU28r0oU7qOdRW5K61oI0i">Preorder</a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="product-card" data-category="bracelets" onclick="openModal(this)"
+    data-name="Lucky Elephant &amp; Stars Bracelet"
+    data-img="images/elephant-star-bracelet.jpg"
+    data-price="$28"
+    data-cat="Bracelet"
+    data-detail="Gold beads and stars woven on braided cord with a red lucky bow and elephant charm. The elephant symbolizes strength, wisdom, and good fortune. Handmade feel, serious charm energy."
+    data-specs="Material: Gold-tone alloy + Woven Cord | Closure: Adjustable chain | Style: Lucky charm">
+    <img class="product-img" src="images/elephant-star-bracelet.jpg" alt="Lucky Elephant & Stars Bracelet">
+    <div class="product-info">
+      <div class="category-label">Bracelet</div>
+      <div class="product-name">Lucky Elephant &amp; Stars Bracelet</div>
+      <div class="product-desc">Gold beads and stars on woven cord with red bow + elephant charm.</div>
+      <div class="product-footer">
+        <span class="product-price">$28<span class="shipping-note">Ships week of July 13</span></span>
+        <a class="btn-buy" href="https://buy.stripe.com/9B6cN5gnSeTg15a2xU1oI0l">Preorder</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- EARRINGS -->
+<div class="section-header">
+  <h2>Earrings</h2>
+  <div class="divider"></div>
+</div>
+
+<div class="products">
+
+  <div class="product-card" data-category="earrings" onclick="openModal(this)"
+    data-name="Pink Gemstone Round Studs"
+    data-img="images/pink-gem-studs.jpg"
+    data-price="$14"
+    data-cat="Earrings"
+    data-detail="Pink gems, gold bezels. Morning coffee to dinner plans, these work with everything. Lightweight enough to wear all day without thinking about it."
+    data-specs="Material: Gold-tone alloy + Pink Gemstone | Back: Push-back | Weight: Lightweight">
+    <img class="product-img" src="images/pink-gem-studs.jpg" alt="Pink Gemstone Studs">
+    <div class="product-info">
+      <div class="category-label">Earrings</div>
+      <div class="product-name">Pink Gemstone Round Studs</div>
+      <div class="product-desc">Feminine pink gems in polished gold bezels. Everyday sparkle.</div>
+      <div class="product-footer">
+        <span class="product-price">$14<span class="shipping-note">Ships week of July 13</span></span>
+        <a class="btn-buy" href="https://buy.stripe.com/8x24gz4Fa6mKeW0fkG1oI07">Preorder</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card" data-category="earrings" onclick="openModal(this)"
+    data-name="Gold Circle Studs with CZ"
+    data-img="images/gold-circle-studs.jpg"
+    data-price="$14"
+    data-cat="Earrings"
+    data-detail="Gold circles, micro-pavé CZ. Minimal enough for Monday meetings, polished enough for Saturday night. The definition of versatile."
+    data-specs="Material: Gold-tone alloy + CZ | Back: Push-back | Style: Minimalist">
+    <img class="product-img" src="images/gold-circle-studs.jpg" alt="Gold Circle CZ Studs">
+    <div class="product-info">
+      <div class="category-label">Earrings</div>
+      <div class="product-name">Gold Circle Studs with CZ</div>
+      <div class="product-desc">Minimal circles with micro-pavé stones. Modern and versatile.</div>
+      <div class="product-footer">
+        <span class="product-price">$14<span class="shipping-note">Ships week of July 13</span></span>
+        <a class="btn-buy" href="https://buy.stripe.com/dRmaEX0oU5iG7tyegC1oI06">Preorder</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card" data-category="earrings" onclick="openModal(this)"
+    data-name="Four-Petal Flower Studs"
+    data-img="images/flower-studs.jpg"
+    data-price="$14"
+    data-cat="Earrings"
+    data-detail="Four petals, tiny CZ centers. Sweet without overdoing it. Classy without trying. A quiet little detail that people notice up close."
+    data-specs="Material: Gold-tone alloy + CZ | Back: Push-back | Style: Floral">
+    <img class="product-img" src="images/flower-studs.jpg" alt="Flower Petal Studs">
+    <div class="product-info">
+      <div class="category-label">Earrings</div>
+      <div class="product-name">Four-Petal Flower Studs</div>
+      <div class="product-desc">Delicate flowers with CZ centers. Sweet and classy.</div>
+      <div class="product-footer">
+        <span class="product-price">$14<span class="shipping-note">Ships week of July 13</span></span>
+        <a class="btn-buy" href="https://buy.stripe.com/5kQfZh0oUdPc5lq3BY1oI05">Preorder</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card" data-category="earrings" onclick="openModal(this)"
+    data-name="Double Knot Hoop Earrings"
+    data-img="images/knot-hoop-earrings.jpg"
+    data-price="$14"
+    data-cat="Earrings"
+    data-detail="Knot hoops with CZ shimmer. Glamorous but surprisingly light on the ear. The pair that turns a simple outfit into something deliberate."
+    data-specs="Material: Gold-tone alloy + CZ | Back: Hinged snap | Style: Glam hoop">
+    <img class="product-img" src="images/knot-hoop-earrings.jpg" alt="Double Knot Hoop Earrings">
+    <div class="product-info">
+      <div class="category-label">Earrings</div>
+      <div class="product-name">Double Knot Hoop Earrings</div>
+      <div class="product-desc">Intertwined knot hoops with CZ. Glamorous and lightweight.</div>
+      <div class="product-footer">
+        <span class="product-price">$14<span class="shipping-note">Ships week of July 13</span></span>
+        <a class="btn-buy" href="https://buy.stripe.com/5kQ4gz8Vq5iGcNS5K61oI04">Preorder</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card" data-category="earrings" onclick="openModal(this)"
+    data-name="Baguette Crystal Hoops"
+    data-img="images/baguette-hoop-earrings.jpg"
+    data-price="$14"
+    data-cat="Earrings"
+    data-detail="Baguette crystals lining an architectural hoop. Sculptural, full of fire, modern. These catch light from angles you didn't know existed."
+    data-specs="Material: Gold-tone alloy + Baguette Crystal | Back: Hinged snap | Style: Architectural">
+    <img class="product-img" src="images/baguette-hoop-earrings.jpg" alt="Baguette Crystal Hoops">
+    <div class="product-info">
+      <div class="category-label">Earrings</div>
+      <div class="product-name">Baguette Crystal Hoops</div>
+      <div class="product-desc">Architectural hoops with baguette-cut crystals. Modern art.</div>
+      <div class="product-footer">
+        <span class="product-price">$14<span class="shipping-note">Ships week of July 13</span></span>
+        <a class="btn-buy" href="https://buy.stripe.com/eVq5kD4Fa9yW6pu2xU1oI0s">Preorder</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- RINGS -->
+<div class="section-header">
+  <h2>Rings</h2>
+  <div class="divider"></div>
+</div>
+
+<div class="products">
+
+  <div class="product-card" data-category="rings" onclick="openModal(this)"
+    data-name="Mystery Gold Ring"
+    data-img="images/mystery-ring.jpg"
+    data-price="$14"
+    data-cat="Ring"
+    data-detail="Every ring is unique. You'll receive one beautiful gold ring from our curated collection. Which one will you get? Adjustable band fits all sizes."
+    data-specs="Material: Gold-tone alloy | Fit: Adjustable, universal size | Style: Surprise selection">
+    <img class="product-img" src="images/mystery-ring.jpg" alt="Mystery Gold Ring">
+    <div class="product-info">
+      <div class="category-label">Ring</div>
+      <div class="product-name">Mystery Gold Ring</div>
+      <div class="product-desc">One beautiful gold ring. Which style will you get? Adjustable, universal fit.</div>
+      <div class="product-footer">
+        <span class="product-price">$14<span class="shipping-note">Ships week of July 13</span></span>
+        <a class="btn-buy" href="https://buy.stripe.com/4gM3cv5JeaD0bJO8Wi1oI03">Preorder</a>
       </div>
     </div>
   </div>
@@ -452,24 +1041,24 @@ body {
 <!-- FEATURES -->
 <div class="features">
   <div class="feature">
+    <i class="fa-solid fa-gem"></i>
+    <h3>Pure Gold Finish</h3>
+    <p>Beautiful gold-tone finish on every piece</p>
+  </div>
+  <div class="feature">
+    <i class="fa-solid fa-hand-sparkles"></i>
+    <h3>Handcrafted</h3>
+    <p>Artisan-made with meticulous care</p>
+  </div>
+  <div class="feature">
     <i class="fa-solid fa-truck-fast"></i>
-    <h3>Fast Shipping</h3>
-    <p>Orders ship within 1-2 business days</p>
+    <h3>Insured Shipping</h3>
+    <p>Secure delivery on every order</p>
   </div>
   <div class="feature">
-    <i class="fa-solid fa-shield-heart"></i>
-    <h3>Authentic Products</h3>
-    <p>100% genuine branded squishies</p>
-  </div>
-  <div class="feature">
-    <i class="fa-solid fa-rotate-left"></i>
-    <h3>Easy Returns</h3>
-    <p>Not happy? Return within 14 days</p>
-  </div>
-  <div class="feature">
-    <i class="fa-solid fa-gift"></i>
-    <h3>Gift Ready</h3>
-    <p>Perfect for birthdays &amp; surprises</p>
+    <i class="fa-solid fa-certificate"></i>
+    <h3>Authenticity</h3>
+    <p>Certificate of purity included</p>
   </div>
 </div>
 
@@ -477,43 +1066,120 @@ body {
 <div class="footer">
   <a href="#"><i class="fa-brands fa-instagram"></i></a>
   <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-  <a href="#"><i class="fa-brands fa-twitter"></i></a>
-  <p>&copy; 2026 Squish &amp; Co. — All rights reserved 💕</p>
+  <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+  <p>&copy; 2026 Allure. All rights reserved</p>
+  <a href="../index.html" class="sister-link">Visit our sister shop &rsaquo;</a>
 </div>
 
-<!-- FILTER SCRIPT -->
+<!-- MODAL -->
+<div class="modal-overlay" id="productModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">&times;</button>
+    <img class="modal-img" id="modalImg" src="" alt="">
+    <div class="modal-content">
+      <div class="modal-category" id="modalCat"></div>
+      <div class="modal-name" id="modalName"></div>
+      <div class="modal-description" id="modalDesc"></div>
+      <div class="modal-details" id="modalSpecs"></div>
+      <div class="modal-price" id="modalPrice"></div>
+      <a class="btn-buy" id="modalBuyBtn" href="#" target="_blank">Preorder</a>
+      <p style="font-size:0.7em;color:var(--text-light);margin-top:8px;font-weight:300;">Ships week of July 13</p>
+    </div>
+  </div>
+</div>
+
 <script>
-  const navLinks = document.querySelectorAll('.nav a[data-filter]');
-  const productCards = document.querySelectorAll('.product-card');
+// Modal
+function openModal(card) {
+  if (event) event.preventDefault();
+  const modal = document.getElementById('productModal');
+  document.getElementById('modalImg').src = card.dataset.img;
+  document.getElementById('modalImg').alt = card.dataset.name;
+  document.getElementById('modalCat').textContent = card.dataset.cat;
+  document.getElementById('modalName').innerHTML = card.dataset.name;
+  document.getElementById('modalDesc').textContent = card.dataset.detail;
+  document.getElementById('modalPrice').textContent = card.dataset.price;
+  // Set the modal buy button URL
+  var buyBtn = card.querySelector('.btn-buy');
+  var stripeUrl = buyBtn ? buyBtn.getAttribute('href') : '#';
+  document.getElementById('modalBuyBtn').setAttribute('href', stripeUrl);
+  
+  // Parse specs
+  const specs = card.dataset.specs.split(' | ');
+  let specsHtml = '';
+  specs.forEach(s => {
+    const parts = s.split(': ');
+    specsHtml += '<p><span>' + parts[0] + ':</span> ' + parts[1] + '</p>';
+  });
+  document.getElementById('modalSpecs').innerHTML = specsHtml;
+  
+  modal.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
 
-  navLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
+// Buy buttons go to Stripe, card click opens modal
+document.querySelectorAll('.product-card .btn-buy').forEach(btn => {
+  btn.addEventListener('click', function(e) {
+    e.stopPropagation(); // Don't trigger card's openModal
+    var url = this.getAttribute('href');
+    if (url && url !== '#') {
+      window.open(url, '_blank');
+    }
+    e.preventDefault();
+  });
+});
 
-      // Update active state
-      navLinks.forEach(l => l.classList.remove('active'));
-      this.classList.add('active');
+function closeModal() {
+  document.getElementById('productModal').classList.remove('active');
+  document.body.style.overflow = '';
+}
 
-      const filter = this.getAttribute('data-filter');
+document.getElementById('productModal').addEventListener('click', function(e) {
+  if (e.target === this) closeModal();
+});
 
-      productCards.forEach(card => {
-        if (filter === 'all') {
-          card.style.display = '';
-          card.style.opacity = '1';
-          card.style.transform = '';
-        } else {
-          const categories = card.getAttribute('data-category') || '';
-          if (categories.includes(filter)) {
-            card.style.display = '';
-            card.style.opacity = '1';
-            card.style.transform = '';
-          } else {
-            card.style.display = 'none';
-          }
-        }
-      });
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeModal();
+});
+
+// Nav filtering
+const navLinks = document.querySelectorAll('.nav a[data-filter]');
+const productCards = document.querySelectorAll('.product-card');
+const sectionHeaders = document.querySelectorAll('.section-header');
+const productGrids = document.querySelectorAll('.products');
+
+navLinks.forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    navLinks.forEach(l => l.classList.remove('active'));
+    this.classList.add('active');
+
+    const filter = this.getAttribute('data-filter');
+
+    sectionHeaders.forEach(header => {
+      if (filter === 'all') {
+        header.style.display = '';
+      } else {
+        const headerText = header.querySelector('h2').textContent.toLowerCase();
+        header.style.display = headerText === filter ? '' : 'none';
+      }
+    });
+
+    productCards.forEach(card => {
+      if (filter === 'all') {
+        card.style.display = '';
+      } else {
+        const category = card.getAttribute('data-category') || '';
+        card.style.display = category === filter ? '' : 'none';
+      }
+    });
+
+    productGrids.forEach(grid => {
+      const visibleCards = grid.querySelectorAll('.product-card:not([style*="display: none"])');
+      grid.style.display = visibleCards.length === 0 ? 'none' : '';
     });
   });
+});
 </script>
 
 </body>
